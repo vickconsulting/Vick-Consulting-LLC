@@ -1,1 +1,1409 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vick Consulting | AHA Training • Safety • HR • Leadership</title>
+  <meta name="description" content="Vick Consulting delivers American Heart Association (AHA) compliant training as the front door to a full suite of safety, HR, and leadership solutions." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-alt: #f7fafc;
+      --card-bg: #ffffff;
+      --primary: #157347; /* brand green */
+      --primary-soft: #1f8f57;
+      --accent-yellow: #f5b800;
+      --accent-red: #e5534b;
+      --text: #1a1a1a;
+      --muted: #5f6b7a;
+      --border-subtle: #e2e8f0;
+      --radius-xl: 20px;
+      --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.08);
+      --transition-fast: 0.18s ease-out;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg-alt);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    main {
+      padding-top: 80px;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.25rem 3.5rem;
+    }
+
+    .section {
+      padding: 4rem 0 0;
+    }
+
+    .section-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .section-title {
+      font-size: 1.9rem;
+      font-weight: 600;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 560px;
+    }
+
+    .pill {
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(21,115,71,0.16);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--primary);
+      background: #e6f6ee;
+      display: inline-flex;
+      gap: 0.45rem;
+      align-items: center;
+    }
+
+    .pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #157347, #f5b800, #e5534b);
+    }
+
+    /* Header / Nav */
+    header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      z-index: 20;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-subtle);
+      box-shadow: 0 4px 10px rgba(148, 163, 184, 0.15);
+    }
+
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: conic-gradient(from 210deg, #157347, #f5b800, #e5534b, #157347);
+      padding: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand-logo-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      color: #157347;
+    }
+
+    .brand-text-main {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .brand-text-sub {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.3rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 400;
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+      transition: color var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+      border-color: rgba(21,115,71,0.4);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.55rem 1.15rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-soft));
+      color: #ffffff;
+      font-size: 0.8rem;
+      font-weight: 500;
+      border: none;
+      box-shadow: 0 10px 20px rgba(21,115,71,0.28);
+      cursor: pointer;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background 0.2s ease-out;
+      white-space: nowrap;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 30px rgba(21,115,71,0.35);
+      background: linear-gradient(135deg, var(--primary-soft), var(--primary));
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.48rem 0.95rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      border: 1px solid var(--border-subtle);
+      background: #ffffff;
+      color: var(--muted);
+      cursor: pointer;
+      transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .btn-ghost:hover {
+      background: #f1f5f9;
+      border-color: rgba(21,115,71,0.35);
+      color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    .nav-toggle {
+      display: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 2.4rem;
+      align-items: center;
+      padding-top: 3.5rem;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .hero-title {
+      font-size: 2.4rem;
+      line-height: 1.15;
+      font-weight: 600;
+    }
+
+    .hero-title span {
+      background: linear-gradient(120deg, var(--primary-soft), var(--accent-yellow));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 36rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      font-size: 0.78rem;
+    }
+
+    .hero-badge {
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: #ffffff;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 0.4rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-top: 0.9rem;
+      font-size: 0.83rem;
+      color: var(--muted);
+    }
+
+    .hero-meta-item strong {
+      display: block;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .hero-right {
+      position: relative;
+    }
+
+    .hero-panel {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1.5rem 1.4rem 1.3rem;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-panel-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .hero-panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .hero-panel-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .hero-panel-tag {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-panel-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+      font-size: 0.8rem;
+    }
+
+    .hero-card {
+      background: #f8fafc;
+      border-radius: 14px;
+      padding: 0.7rem 0.75rem;
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .hero-card-label {
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    .hero-card-value {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .hero-card-pill {
+      font-size: 0.7rem;
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .hero-card-pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #2ec27e;
+    }
+
+    .hero-panel-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.3rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-panel-footer span strong {
+      color: var(--primary);
+    }
+
+    /* Stats strip */
+    .stats-strip {
+      margin-top: 2.6rem;
+      padding: 0.9rem 1rem;
+      border-radius: 18px;
+      border: 1px solid var(--border-subtle);
+      background: #ffffff;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.2rem;
+      font-size: 0.8rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .stat-item span {
+      display: block;
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .stat-item small {
+      color: var(--muted);
+      font-size: 0.76rem;
+    }
+
+    /* Cards grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius-xl);
+      padding: 1.4rem 1.3rem 1.3rem;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      font-size: 0.86rem;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.7rem;
+    }
+
+    .card-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e6f6ee;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .card-body {
+      color: var(--muted);
+    }
+
+    .card-list {
+      margin-top: 0.4rem;
+      padding-left: 1.1rem;
+    }
+
+    .card-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    .card-tag {
+      font-size: 0.7rem;
+      color: var(--primary);
+      margin-top: 0.3rem;
+    }
+
+    /* Industries */
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      font-size: 0.8rem;
+    }
+
+    .pill-chip {
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: #ffffff;
+      color: var(--muted);
+    }
+
+    /* Steps */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .step {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1rem 1rem 0.9rem;
+      border: 1px dashed rgba(21,115,71,0.35);
+      font-size: 0.82rem;
+      color: var(--muted);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .step-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--primary);
+      margin-bottom: 0.35rem;
+    }
+
+    .step-title {
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+
+    /* FAQ */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr);
+      gap: 1.6rem;
+    }
+
+    .faq-item {
+      border-radius: 16px;
+      border: 1px solid var(--border-subtle);
+      background: #ffffff;
+      overflow: hidden;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      padding: 0.85rem 1rem;
+      background: transparent;
+      border: none;
+      color: var(--text);
+      font-size: 0.86rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .faq-question span {
+      flex: 1;
+      padding-right: 0.9rem;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      transition: max-height 0.2s ease-out, padding-bottom 0.2s ease-out;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 220px;
+      padding-bottom: 0.9rem;
+    }
+
+    .faq-toggle-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(21,115,71,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      color: var(--primary);
+    }
+
+    /* Contact */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 1.8rem;
+    }
+
+    .contact-card {
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      padding: 1.5rem 1.4rem;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      font-size: 0.85rem;
+    }
+
+    .contact-meta-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1rem;
+      margin-top: 0.7rem;
+      font-size: 0.82rem;
+    }
+
+    .contact-meta-row a {
+      color: var(--primary);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      font-size: 0.82rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.2rem;
+      font-size: 0.78rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 0.5rem 0.7rem;
+      border-radius: 10px;
+      border: 1px solid var(--border-subtle);
+      background: #ffffff;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.82rem;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #94a3b8;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    .form-hint {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .form-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-top: 0.3rem;
+      flex-wrap: wrap;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 1.6rem 1.25rem 1.8rem;
+      margin-top: 4rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      background: #ffffff;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    /* Back to top */
+    .back-to-top {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.6rem;
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      color: var(--primary);
+      box-shadow: var(--shadow-soft);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: opacity 0.2s ease-out, transform 0.2s ease-out, visibility 0.2s ease-out;
+      z-index: 25;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      .stats-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .steps-grid,
+      .faq-grid,
+      .contact-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      nav {
+        position: fixed;
+        inset: 70px 0 auto 0;
+        background: #ffffff;
+        padding: 0.8rem 1.25rem 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        transform: translateY(-100%);
+        transition: transform 0.2s ease-out;
+      }
+
+      nav.open {
+        transform: translateY(0);
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+      }
+
+      .nav-cta {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .cards-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .stats-strip {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .form-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-logo">
+          <div class="brand-logo-inner">VC</div>
+        </div>
+        <div>
+          <div class="brand-text-main">Vick Consulting</div>
+          <div class="brand-text-sub">AHA Training • Safety • HR • Leadership</div>
+        </div>
+      </div>
+
+      <nav id="main-nav">
+        <div class="nav-links">
+          <a href="#aha">AHA Courses</a>
+          <a href="#employers">For Employers</a>
+          <a href="#approach">How it works</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-cta">
+          <button class="btn-ghost" type="button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+            <i class="fa-regular fa-calendar"></i>
+            Book info call
+          </button>
+          <button class="btn-primary" type="button" onclick="document.getElementById('aha').scrollIntoView({behavior: 'smooth'})">
+            <i class="fa-solid fa-heart-pulse"></i>
+            View AHA classes
+          </button>
+        </div>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="page">
+      <!-- Hero: AHA first -->
+      <section class="section" id="top">
+        <div class="hero">
+          <div class="hero-left">
+            <div class="pill">
+              <span class="pill-dot"></span>
+              American Heart Association compliant training, delivered where you are
+            </div>
+
+            <h1 class="hero-title">
+              Lead with <span>AHA certification</span>,
+              then build safer, stronger workplaces.
+            </h1>
+
+            <p class="hero-subtitle">
+              As an American Heart Association (AHA) Instructor, I start by equipping your people with CPR, BLS, and First Aid skills. From there, we extend into safety, HR, and leadership support—so one training relationship can power your entire people & safety strategy.
+            </p>
+
+            <div class="hero-badges">
+              <div class="hero-badge">AHA CPR, BLS & First Aid</div>
+              <div class="hero-badge">On-site & group classes</div>
+              <div class="hero-badge">OSHA & EPA aligned safety training</div>
+              <div class="hero-badge">HR, leadership & staffing support</div>
+            </div>
+
+            <div class="hero-actions">
+              <button class="btn-primary" type="button" onclick="document.getElementById('aha').scrollIntoView({behavior: 'smooth'})">
+                <i class="fa-regular fa-calendar-check"></i>
+                Book an AHA class
+              </button>
+
+              <!-- Download button: point this to your PDF catalog/profile -->
+              <a class="btn-ghost" href="assets/Vick-Consulting-Profile.pdf" download>
+                <i class="fa-solid fa-download"></i>
+                Download course & services overview
+              </a>
+            </div>
+
+            <div class="hero-meta">
+              <div class="hero-meta-item">
+                <strong>AHA Instructor • PhD (Leadership)</strong>
+                Specializing in emotional intelligence & transformational leadership.
+              </div>
+              <div class="hero-meta-item">
+                <strong>MBA (Global Operations) • BA (Mathematics)</strong>
+                Plus CSP, SPHR, PMP, CSM & CHMM credentials to support complex operations.
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="hero-panel">
+              <div class="hero-panel-inner">
+                <div class="hero-panel-header">
+                  <div>
+                    <div class="hero-panel-title">Upcoming AHA training & options</div>
+                    <div class="hero-panel-tag">Example view of how we can structure sessions for your teams.</div>
+                  </div>
+                </div>
+
+                <div class="hero-panel-grid">
+                  <div class="hero-card">
+                    <div class="hero-card-label">Workplace CPR / AED</div>
+                    <div class="hero-card-value">Monthly & on-demand</div>
+                    <div class="hero-card-pill">
+                      <span class="hero-card-pill-dot"></span>
+                      Ideal for offices, schools & churches
+                    </div>
+                  </div>
+
+                  <div class="hero-card">
+                    <div class="hero-card-label">BLS for Healthcare</div>
+                    <div class="hero-card-value">Clinics & high‑risk sites</div>
+                    <div class="hero-card-pill">
+                      <span class="hero-card-pill-dot"></span>
+                      Flexible schedules for shift teams
+                    </div>
+                  </div>
+
+                  <div class="hero-card">
+                    <div class="hero-card-label">Group & on‑site classes</div>
+                    <div class="hero-card-value">At your location</div>
+                    <div class="hero-card-pill">
+                      <span class="hero-card-pill-dot"></span>
+                      We come to your facility
+                    </div>
+                  </div>
+
+                  <div class="hero-card">
+                    <div class="hero-card-label">Add‑on safety modules</div>
+                    <div class="hero-card-value">OSHA, EPA, Fire & HazMat</div>
+                    <div class="hero-card-pill">
+                      <span class="hero-card-pill-dot"></span>
+                      Extend training into full compliance
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hero-panel-footer">
+                  <span>
+                    Start with <strong>AHA training</strong>, then layer in safety, HR, and leadership solutions as your team grows.
+                  </span>
+                  <span>
+                    Custom schedules available for employers.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Credentials strip -->
+        <div class="stats-strip">
+          <div class="stat-item">
+            <span>10+ years</span>
+            <small>Experience across meteorology, safety, HR and operations.</small>
+          </div>
+          <div class="stat-item">
+            <span>Multi‑credentialed</span>
+            <small>PhD, MBA, AHA Instructor, CSP, SPHR, PMP, CSM, CHMM.</small>
+          </div>
+          <div class="stat-item">
+            <span>AHA‑first</span>
+            <small>Training as the front door to long‑term partnerships.</small>
+          </div>
+          <div class="stat-item">
+            <span>US‑based</span>
+            <small>Indianapolis, IN • Serving organizations across the U.S.</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- AHA Training Center -->
+      <section class="section" id="aha">
+        <div class="section-header">
+          <div class="section-kicker">AHA Training Center</div>
+          <h2 class="section-title">American Heart Association compliant courses for individuals & teams.</h2>
+          <p class="section-subtitle">
+            Choose the AHA courses that fit your people, your risks, and your environment. We can deliver open classes, private sessions, or on‑site training at your facility.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fa-solid fa-heart-pulse"></i>
+              </div>
+              <div>
+                <div class="card-title">CPR & AED for Workplace and Community</div>
+                <div class="card-tag">Ideal for offices, schools, churches & community groups</div>
+              </div>
+            </div>
+            <div class="card-body">
+              Practical CPR and AED skills built around real‑life scenarios.
+              <ul class="card-list">
+                <li>Adult, child and infant CPR techniques</li>
+                <li>Use of AEDs and emergency response basics</li>
+                <li>Designed for non‑clinical staff and volunteers</li>
+                <li>Available as open enrollment or on‑site group classes</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fa-solid fa-stethoscope"></i>
+              </div>
+              <div>
+                <div class="card-title">Basic Life Support (BLS)</div>
+                <div class="card-tag">Healthcare, clinics & high‑risk operations</div>
+              </div>
+            </div>
+            <div class="card-body">
+              Evidence‑based AHA BLS training tailored to your clinical or high‑risk setting.
+              <ul class="card-list">
+                <li>Perfect for healthcare teams and safety‑critical roles</li>
+                <li>Scenarios built around your actual work environment</li>
+                <li>Options for initial certification and renewals</li>
+                <li>Group schedules designed to minimize downtime</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fa-solid fa-kit-medical"></i>
+              </div>
+              <div>
+                <div class="card-title">First Aid & Emergency Response</div>
+                <div class="card-tag">Customizable for your site and hazards</div>
+              </div>
+            </div>
+            <div class="card-body">
+              Give your team confidence to act in the first critical minutes.
+              <ul class="card-list">
+                <li>First aid fundamentals for injuries & illness</li>
+                <li>Scenario‑based training tied to your operations</li>
+                <li>Options to combine with CPR / AED sessions</li>
+                <li>Great entry point for broader safety conversations</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- For Employers: Safety, HR & Leadership after AHA -->
+      <section class="section" id="employers">
+        <div class="section-header">
+          <div class="section-kicker">For Employers</div>
+          <h2 class="section-title">After AHA training, we help you build systems around it.</h2>
+          <p class="section-subtitle">
+            Once your teams are certified, we expand the relationship into safety, HR, leadership, and staffing support—so training becomes the starting point, not the finish line.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fa-solid fa-helmet-safety"></i>
+              </div>
+              <div>
+                <div class="card-title">Safety & EHS Programs</div>
+                <div class="card-tag">OSHA • EPA • Emergency Planning • Fire Safety</div>
+              </div>
+            </div>
+            <div class="card-body">
+              Use AHA training as the entry point to a stronger safety system.
+              <ul class="card-list">
+                <li>OSHA‑focused safety awareness and hazard recognition</li>
+                <li>Emergency action planning and drills aligned with your site</li>
+                <li>Fire safety, evacuation and extinguisher training</li>
+                <li>Hazardous materials awareness aligned with EPA expectations</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fa-solid fa-users-gear"></i>
+              </div>
+              <div>
+                <div class="card-title">HR & Compliance Support</div>
+                <div class="card-tag">SPHR‑backed HR guidance</div>
+              </div>
+            </div>
+            <div class="card-body">
+              Help your leaders connect safety, HR, and day‑to‑day management.
+              <ul class="card-list">
+                <li>Supervisor training on policies, documentation and fair treatment</li>
+                <li>HR process reviews around onboarding, investigations and return‑to‑work</li>
+                <li>Support aligning safety responsibilities with job descriptions</li>
+                <li>Input on people metrics that support safety and culture goals</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fa-solid fa-chalkboard-user"></i>
+              </div>
+              <div>
+                <div class="card-title">Leadership & Coaching</div>
+                <div class="card-tag">PhD in Emotional Intelligence & Transformational Leadership</div>
+              </div>
+            </div>
+            <div class="card-body">
+              Develop leaders who can hold safety, people, and performance together.
+              <ul class="card-list">
+                <li>Coaching for supervisors and emerging leaders</li>
+                <li>Workshops on emotional intelligence and difficult conversations</li>
+                <li>Leadership labs built around your real incidents and scenarios</li>
+                <li>Follow‑up support so learning translates into habits</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section class="section" id="approach">
+        <div class="section-header">
+          <div class="section-kicker">How it works</div>
+          <h2 class="section-title">From first AHA class to long‑term partnership.</h2>
+          <p class="section-subtitle">
+            We keep the process simple so you can move quickly and see value at every step.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step">
+            <div class="step-label">Step 1</div>
+            <div class="step-title">Pick your AHA courses</div>
+            We clarify who needs CPR, BLS or First Aid, choose dates, and decide whether you prefer open enrollment, private classes, or on‑site sessions.
+          </div>
+          <div class="step">
+            <div class="step-label">Step 2</div>
+            <div class="step-title">Deliver training & capture insights</div>
+            During training we pay attention to your culture, gaps and pain points, so we can give you practical recommendations—not just certificates.
+          </div>
+          <div class="step">
+            <div class="step-label">Step 3</div>
+            <div class="step-title">Extend into safety, HR & leadership</div>
+            Based on what we learn, we design optional follow‑up support: additional safety modules, HR training, leadership coaching, or staffing guidance.
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq">
+        <div class="section-header">
+          <div class="section-kicker">FAQ</div>
+          <h2 class="section-title">Questions people ask before scheduling.</h2>
+          <p class="section-subtitle">
+            If you don’t see your question here, we’ll cover it in a quick call.
+          </p>
+        </div>
+
+        <div class="faq-grid">
+          <div>
+            <div class="faq-item">
+              <button class="faq-question" type="button" onclick="toggleFaq(this)">
+                <span>Do you only offer AHA training, or can you support safety and HR too?</span>
+                <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+              </button>
+              <div class="faq-answer">
+                AHA training is the front door—but not the end. Most clients start with CPR, BLS or First Aid and then invite support for safety programs, HR training, or leadership development once trust is built.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button" onclick="toggleFaq(this)">
+                <span>Can you come on‑site to our facility or church?</span>
+                <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+              </button>
+              <div class="faq-answer">
+                Yes. We can host on‑site AHA classes at your location as long as we have a suitable training space. This is often the best option for teams, churches, schools and project sites.
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="faq-item">
+              <button class="faq-question" type="button" onclick="toggleFaq(this)">
+                <span>Do you work with small organizations or only large employers?</span>
+                <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+              </button>
+              <div class="faq-answer">
+                We work with individuals, small teams and large organizations. We can design something simple for a small clinic or church—or a multi‑site plan for larger employers.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button" onclick="toggleFaq(this)">
+                <span>How soon can we schedule a class?</span>
+                <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+              </button>
+              <div class="faq-answer">
+                Timing depends on class size and location, but many clients are able to schedule their first sessions within 2–4 weeks. If you have a tight deadline, we’ll talk through options in your initial call.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section" id="contact">
+        <div class="section-header">
+          <div class="section-kicker">Contact</div>
+          <h2 class="section-title">Let’s start with your AHA training needs.</h2>
+          <p class="section-subtitle">
+            Share a bit about your people and timelines. We’ll follow up with options for AHA courses and, if helpful, ideas for safety, HR and leadership support.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-card">
+            <h3 style="font-size: 1rem; margin-bottom: 0.4rem;">Direct contact</h3>
+            <p>
+              Prefer email or a quick call? Reach out and we’ll coordinate time with you and your team.
+            </p>
+
+            <div class="contact-meta-row">
+              <div>
+                <strong>Email</strong><br>
+                <a href="mailto:visiondriver.pro@gmail.com">visiondriver.pro@gmail.com</a>
+              </div>
+              <div>
+                <strong>Phone / WhatsApp</strong><br>
+                <a href="tel:+18323439970">+1 (832) 343-9970</a>
+              </div>
+            </div>
+
+            <div class="contact-meta-row" style="margin-top: 0.75rem;">
+              <div>
+                <strong>LinkedIn</strong><br>
+                <a href="https://www.linkedin.com/in/drpams" target="_blank" rel="noopener">linkedin.com/in/drpams</a>
+              </div>
+              <div>
+                <strong>Location</strong><br>
+                Indianapolis, IN (Remote‑friendly / EST)
+              </div>
+            </div>
+
+            <p style="margin-top: 0.8rem;" class="form-hint">
+              We work with organizations across the U.S. and in hybrid / remote formats.
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <h3 style="font-size: 1rem; margin-bottom: 0.4rem;">Share your project</h3>
+            <form>
+              <div class="form-row">
+                <div>
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your full name" required>
+                </div>
+                <div>
+                  <label for="org">Organization</label>
+                  <input type="text" id="org" name="org" placeholder="Company / institution / church" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div>
+                  <label for="email">Work email</label>
+                  <input type="email" id="email" name="email" placeholder="you@company.com" required>
+                </div>
+                <div>
+                  <label for="focus">Primary interest</label>
+                  <select id="focus" name="focus">
+                    <option value="">Select an area</option>
+                    <option value="aha">AHA CPR / BLS / First Aid</option>
+                    <option value="safety">Safety & EHS follow‑up</option>
+                    <option value="hr">HR & compliance training</option>
+                    <option value="leadership">Leadership & coaching</option>
+                    <option value="combined">Combined / not sure yet</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="message">What would you like to schedule or improve?</label>
+                <textarea id="message" name="message" placeholder="Share class types, number of people, timings, and any safety / HR / leadership goals."></textarea>
+              </div>
+
+              <div class="form-footer">
+                <button class="btn-primary" type="submit">
+                  <i class="fa-regular fa-paper-plane"></i>
+                  Submit inquiry (demo)
+                </button>
+                <p class="form-hint">
+                  This form is for demonstration. Use email or phone above to confirm dates.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        &copy; <span id="year"></span> Vick Consulting. All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="#top">Back to top</a>
+        <span>&middot;</span>
+        <span>AHA Training • Safety • HR • Leadership</span>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script>
+    function toggleNav() {
+      const nav = document.getElementById('main-nav');
+      nav.classList.toggle('open');
+    }
+
+    function toggleFaq(button) {
+      const item = button.closest('.faq-item');
+      const isActive = item.classList.contains('active');
+
+      document.querySelectorAll('.faq-item').forEach(function(other) {
+        other.classList.remove('active');
+        const icon = other.querySelector('.faq-toggle-icon i');
+        if (icon) icon.className = 'fa-solid fa-plus';
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+        const icon = item.querySelector('.faq-toggle-icon i');
+        if (icon) icon.className = 'fa-solid fa-minus';
+      }
+    }
+
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
