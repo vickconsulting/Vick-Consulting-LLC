@@ -1,4 +1,3 @@
-# Vick-Consulting-LLC
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
