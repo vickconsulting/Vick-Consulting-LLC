@@ -1,7 +1,5 @@
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vick Consulting | AHA Training • Safety • HR • Leadership</title>
   <meta name="description" content="Vick Consulting delivers American Heart Association (AHA) compliant training as the front door to a full suite of safety, HR, and leadership solutions." />
 
